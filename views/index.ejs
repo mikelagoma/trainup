@@ -8,7 +8,7 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//platform.linkedin.com/in.js">
       api_key:    <%= IN_KEY %>
       onLoad:     onLinkedInLoad
@@ -35,13 +35,15 @@
     console.log('Logout successfully');
   }
 
+// /people/~:(id,first-name,last-name,headline,picture-url,industry,summary,specialties,positions:(id,title,summary,start-date,end-date,is-current,company:(id,name,type,size,industry,ticker)),educations:(id,school-name,field-of-study,start-date,end-date,degree,activities,notes),associations,interests,num-recommenders,date-of-birth,publications:(id,title,publisher:(name),authors:(id,name),date,url,summary),patents:(id,title,summary,number,status:(id,name),office:(name),inventors:(id,name),date,url),languages:(id,language:(name),proficiency:(level,name)),skills:(id,skill:(name)),certifications:(id,name,authority:(name),number,start-date,end-date),courses:(id,name,number),recommendations-received:(id,recommendation-type,recommendation-text,recommender),honors-awards,three-current-positions,three-past-positions,volunteer)
   // Use the API call wrapper to request the member's basic profile data
   function getProfileData() {
- 
-   IN.API.Profile("me").fields("first-name", "last-name", "email-address","picture-url").result(function (data) {
-    
-    var userdata = data.values[0];
-    console.log(userdata)
+    IN.API.Raw("/people/~:(id,first-name,last-name,headline,picture-url,industry,summary,specialties,positions:(id,title,summary,start-date,end-date,is-current,company:(id,name,type,size,industry,ticker)),educations:(id,school-name,field-of-study,start-date,end-date,degree,activities,notes),associations,interests,num-recommenders,date-of-birth,publications:(id,title,publisher:(name),authors:(id,name),date,url,summary),patents:(id,title,summary,number,status:(id,name),office:(name),inventors:(id,name),date,url),languages:(id,language:(name),proficiency:(level,name)),skills:(id,skill:(name)),certifications:(id,name,authority:(name),number,start-date,end-date),courses:(id,name,number),recommendations-received:(id,recommendation-type,recommendation-text,recommender),honors-awards,three-current-positions,three-past-positions,volunteer)").result(function (data) {
+    // IN.API.Profile("me").fields("first-name", "last-name", "email-address","picture-url").result(function (data) {
+    console.log(JSON.stringify(data))
+    // var userdata = data.values[0];
+    // console.log(userdata)
+    return
 
     $.ajax({
      url: "users/create",
@@ -68,7 +70,7 @@
   <!-- LinkedIn signin button -->
   <script type="in/Login"></script>
   <!-- <table id='tableUser' style='display: none;'> -->
-  <table id='tableUser'>
+  <!-- <table id='tableUser'>
    <tr>
      <td>Api key set?</td>
      <td><span id='apiKey'></span></td>
@@ -88,6 +90,140 @@
     <td><img src='' width='32' height='32' id='profile_photo'></td>
    </tr>
 
-  </table>
+  </table> -->
+
+
+  <div class="container">
+    <h1>Position</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">What do you want to be</label>
+        <input type="text" class="form-control" id="name" required>
+        <select name="roles">
+          <option value="frontend">Front-End Developer</option>
+          <option value="designer">UI/UX Design</option>
+          <option value="pm">Project Management</option>
+          <option value="backend">Back-End Developer</option>
+          <option value="fullstack">Full Stack Web Developer</option>
+          <option value="manager">Engineering Management</option>
+          <option value="devops">DevOps</option>
+          <option value="it">IT and Operations</option>
+          <option value="marketing">Online Marketing</option>
+          <option value="ml">Machine Learning Engineer</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input type="text" class="form-control" id="alterEgo">
+      </div>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+    </div>
+    <ul class="flex-container">
+      <li class="flex-item">Front-End Developer</li>
+      <li class="flex-item">UI/UX Design</li>
+      <li class="flex-item">Project Management</li>
+      <li class="flex-item">Back-End Developer</li>
+      <li class="flex-item">Full Stack Web Developer</li>
+      <li class="flex-item">Engineering Management</li>
+      <li class="flex-item">IT and Operations</li>
+      <li class="flex-item">Engineering Management</li>
+      <li class="flex-item">Online Marketing</li>
+      <li class="flex-item">Machine Learning Engineer</li>
+      <li class="flex-item">DevOps</li>
+      <li class="flex-item">AR/VR Developer</li>
+      <li class="flex-item">Mobile Developer</li>
+    </ul>
+
+  <footer class="site-footer bg-universe" data-detect-viewport="">
+
+        <div class="container-wide section">
+            <a class="footer-logo" href="/" data-animate-in="" title="go to the homepage">
+                <img src="/images/trainup_logo.png" alt="GitHub Universe Type logo" />
+            </a>
+
+            <div class="site-footer-inner">
+                <nav class="site-footer__nav">
+                    <ul>
+                        <li>
+                            <a href="">Link1</a>
+                        </li>
+
+                        <li>
+                            <a href="">Link2</a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">Link3</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="site-footer__contact">
+                    <ul>
+                        <li>
+                            <p class="h6">Twitter</p>
+                            <a href="https://twitter.com/trainup_co" target="_blank" rel="nofollow noreferrer">@trainup_co</a>
+                        </li>
+                        <li>
+                            <p class="h6">General</p>
+                            <a href="mailto:trainupco@gmail.com">trainupco@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="site-footer__register">
+                    <!-- Begin MailChimp Signup Form -->
+                    <h4 class="h4">sign up for updates</h4>
+                    <div id="mc_embed_signup">
+                        <form action="//github.us11.list-manage.com/subscribe/post?u=9d7ced8c4bbd6c2f238673f0f&amp;id=2c583a58c9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe-form" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <div class="mc-field-group">
+                                    <label for="mce-EMAIL" class="d-none sr-only">Email Address</label>
+                                    <input type="email" value="" name="EMAIL" class="form-input required email" id="mce-EMAIL" aria-required="true"  placeholder="your email address">
+                                </div>
+                                <div id="mce-responses" class="clear">
+                                    <div class="response pt-3 text-small" id="mce-error-response" style="display:none"></div>
+                                    <div class="response pt-3 text-small" id="mce-success-response" style="display:none"></div>
+                                </div>
+
+                                <div class="clear">
+                                    <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">Add me!</button>
+                                </div>
+
+                            </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9d7ced8c4bbd6c2f238673f0f_2c583a58c9" tabindex="-1" value=""></div>
+                        </form>
+                    </div>
+                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                    <!--End mc_embed_signup-->
+                </div>
+            </div>
+        </div>
+
+        <div class="site-footer-legal">
+            <div class="container-wide">
+                <!-- <div>
+                    <a class="code-note" href="https://github.com/" target="_blank"><svg width="18" height="13"><use xlink:href="#shape-code"></use></svg> <span>with</span> <svg width="14" height="13"><use xlink:href="#shape-heart"></use></svg> <span>by</span> <svg width="48" height="14"><use xlink:href="#shape-github-logo"></use></svg></a>
+                </div>
+                <div>
+                    <small><a href="">Terms</a>  /  <a href="">Privacy</a>  /  © 2017 GitHub, Inc.</small>
+                </div> -->
+            </div>
+        </div>
+
+        <figure class="shooting-star">
+            <img src="/images/shooting-star.svg" alt="shooting star" />
+        </figure>
+        <figure class="shooting-star-right">
+            <img src="/images/shooting-star.svg" alt="shooting star" />
+        </figure>
+        <img data-detect-viewport="" class="site-footer-planet" src="/images/planet-gradient.svg" alt="Saturn icon" />
+    </footer>
+
  </body>
 </html>
+
