@@ -7,8 +7,14 @@ var bodyParser = require('body-parser');
 
 var mongo = require('mongodb');
 var monk = require('monk');
-// var db = monk('mongodb://heroku_cj78v9z6:qfh9h8ri87fd1jtrsrg2hp86o0@ds231588.mlab.com:31588/heroku_cj78v9z6');
-var db = monk('mongodb://localhost:27017/trainup');
+
+// cloud
+var mlab = 'mongodb://heroku_dmsl126c:' + process.env.MLAB_PW + '@ds261429.mlab.com:61429/heroku_dmsl126c'
+console.log(mlab)
+var db = monk(mlab);
+
+// // local test
+// var db = monk('mongodb://localhost:27017/trainup');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
@@ -25,7 +31,7 @@ app.set('view engine', 'ejs');
 
 // // local database
 // var mongoose = require('mongoose');
-// var mongoDB = 'mongodb://localhost:27017/varsity';
+// var mongoDB = 'mongodb://localhost:27017/trainup';
 
 // mongoose.connect(mongoDB);
 // mongoose.Promise = global.Promise;

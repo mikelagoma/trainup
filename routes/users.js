@@ -10,6 +10,7 @@ router.get('/create', function(req, res) {//, next) {
   console.log(req.query.firstName);
   var db = req.db;
   var collection = db.get('visitors');
+  console.log('insertig into ' + collection.toString());
   collection.insert({
       "firstName" : req.query.firstName,
       "lastName" : req.query.lastName,

@@ -21,7 +21,7 @@
     if (!api_key) {
       $('#apiKey').text('Not found! Set your api key with export LI_CLIENT_ID=xxxxx');
     } else {
-      $('#apiKey').text("<%= IN_KEY %>");
+      $('#apiKey').text("check");
     }
     IN.Event.on(IN, "auth", getProfileData);
   }
@@ -46,7 +46,7 @@
     $.ajax({
      url: "users/create",
      type: "get",
-     data: {"social_type": "linkedin","firstName": userdata.firstName,"lastName": userdata.lastName,"email": userdata.emailAddress, "profile_image": userdata.pictureUrl },
+     data: {"social_type": "linkedin","firstName": userdata.firstName,"lastName": userdata.lastName,"email": userdata.emailAddress, "pictureUrl": userdata.pictureUrl },
      success: function(response){
 
       $('#tableUser').css('display','block');
