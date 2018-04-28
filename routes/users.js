@@ -26,7 +26,6 @@ router.get('/create', function(req, res) {//, next) {
           res.send('User added to db');
       }
   });
-  // res.send('asdsad')
 });
 
 router.get('/list', function(req, res) {

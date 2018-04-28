@@ -1,0 +1,89 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="trainup.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//platform.linkedin.com/in.js">
+    api_key:    <%= IN_KEY %>
+    onLoad:     onLinkedInLoad
+  </script>
+  <script type="text/javascript">
+    // Setup an event listener to make an API call once auth is complete
+    function onLinkedInLoad() {
+      var api_key = "<%= IN_KEY %>"
+      if (!api_key) {
+        $('#apiKey').text('Not found! Set your api key with export LI_CLIENT_ID=xxxxx');
+      } else {
+        $('#apiKey').text("check");
+      }
+      IN.Event.on(IN, "auth", getProfileData);
+    }
+
+    // Logout user
+    function logout(){
+      IN.User.logout(onLogout);
+    }
+
+    function onLogout(){
+      console.log('Logout successfully');
+    }
+
+  // /people/~:(id,first-name,last-name,headline,picture-url,industry,summary,specialties,positions:(id,title,summary,start-date,end-date,is-current,company:(id,name,type,size,industry,ticker)),educations:(id,school-name,field-of-study,start-date,end-date,degree,activities,notes),associations,interests,num-recommenders,date-of-birth,publications:(id,title,publisher:(name),authors:(id,name),date,url,summary),patents:(id,title,summary,number,status:(id,name),office:(name),inventors:(id,name),date,url),languages:(id,language:(name),proficiency:(level,name)),skills:(id,skill:(name)),certifications:(id,name,authority:(name),number,start-date,end-date),courses:(id,name,number),recommendations-received:(id,recommendation-type,recommendation-text,recommender),honors-awards,three-current-positions,three-past-positions,volunteer)
+    // Use the API call wrapper to request the member's basic profile data
+    function getProfileData() {
+      IN.API.Raw("/people/~:(id,first-name,last-name,headline,picture-url,industry,summary,specialties,positions:(id,title,summary,start-date,end-date,is-current,company:(id,name,type,size,industry,ticker)),educations:(id,school-name,field-of-study,start-date,end-date,degree,activities,notes),associations,interests,num-recommenders,date-of-birth,publications:(id,title,publisher:(name),authors:(id,name),date,url,summary),patents:(id,title,summary,number,status:(id,name),office:(name),inventors:(id,name),date,url),languages:(id,language:(name),proficiency:(level,name)),skills:(id,skill:(name)),certifications:(id,name,authority:(name),number,start-date,end-date),courses:(id,name,number),recommendations-received:(id,recommendation-type,recommendation-text,recommender),honors-awards,three-current-positions,three-past-positions,volunteer)").result(function (data) {
+      // IN.API.Profile("me").fields("first-name", "last-name", "email-address","picture-url").result(function (data) {
+        // console.log("Raw data: " + data)
+        // var userdata = JSON.parse(data);
+        var userdata = data;
+        // var userdata = JSON.parse(data);//.values[0];
+        // console.log(userdata);
+
+        $.ajax({
+          url: "users/create",
+          type: "get",
+          data: {"social_type": "linkedin","firstName": userdata.firstName,"lastName": userdata.lastName,"email": userdata.emailAddress, "pictureUrl": userdata.pictureUrl },
+          success: function(response){
+
+            $('#tableUser').css('display','block');
+            $('#fullname').text( userdata.firstName + " " + userdata.lastName);
+            // $('#email').text( userdata.emailAddress );
+            $('#profile_photo').attr( 'src',userdata.pictureUrl );
+            // logout();
+          }
+        });
+
+      }).error(function (data) {
+        console.log("Problem querying LinkedIn");
+      });
+    }
+
+  </script>
+  
+
+</head>
+
+<body>
+    <h1 class="login">Login</h1>
+    <!-- <button class="linkedin">LinkedIn</button> -->
+  <!-- LinkedIn signin button -->
+  <script type="in/Login"></script>
+  <table id='linkedInLogin'>
+    <tr>
+     <td>Name</td>
+     <td><span id='fullname'></span></td>
+   </tr>
+
+   <tr>
+    <td>Email</td>
+    <td><span id='email'></span></td>
+   </tr>
+
+   <tr>
+    <td>Profile image</td>
+    <td><img src='' width='32' height='32' id='profile_photo'></td>
+   </tr>
+
+  </table>
+</body>
+</html>
