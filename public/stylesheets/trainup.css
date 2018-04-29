@@ -1,0 +1,44 @@
+body {
+  background-color: #1b729f;
+  font-family: 'Arial', sans-serif;
+  padding: 48px; }
+
+.login {
+  text-align: center;
+  margin-top: 25%;
+  font-size: 10em; }
+
+h1 {
+  font-size: 4em;
+  color: #fff;
+  font-family: 'Rubik Mono One', sans-serif;
+  word-spacing: -12px; }
+
+button,
+select {
+  background-color: #1a323e;
+  border: none;
+  color: #fff;
+  font-size: 3em;
+  padding: 72px;
+  border-radius: 12px; }
+
+.buttonWrapper button {
+  width: 100%;
+  margin-bottom: 24px;
+  text-align: left;
+  font-weight: bold; }
+
+select {
+  width: 100%;
+  margin-top: 25%; }
+
+option {
+  padding: 12px;
+  font-size: 24px; }
+
+.select {
+  width: 100%;
+  margin-top: 48px; }
+
+/*# sourceMappingURL=trainup.css.map */
