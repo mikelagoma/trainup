@@ -8,15 +8,15 @@ var bodyParser = require('body-parser');
 var mongo = require('mongodb');
 var monk = require('monk');
 
-// // cloud
-// var mlab = 'mongodb://heroku_dmsl126c:' + process.env.MLAB_PW + '@ds261429.mlab.com:61429/heroku_dmsl126c'
-// console.log(mlab)
-// var db = monk(mlab);
+// cloud
+var mlab = 'mongodb://heroku_dmsl126c:' + process.env.MLAB_PW + '@ds261429.mlab.com:61429/heroku_dmsl126c'
+console.log(mlab)
+var db = monk(mlab);
 
-// local test
-var db = monk('mongodb://localhost:27017/trainup');
-var index = require('./routes/index');
-var users = require('./routes/users');
+// // local test
+// var db = monk('mongodb://localhost:27017/trainup');
+// var index = require('./routes/index');
+// var users = require('./routes/users');
 
 var app = express();
 

@@ -55,19 +55,16 @@
     console.log(JSON.stringify(data))
     // var userdata = data.values[0];
     // console.log(userdata)
-    return
-
+    $('#tableUser').css('display','block');
+    $('#fullname').text( userdata.firstName + " " + userdata.lastName);
+    // $('#email').text( userdata.emailAddress );
+    $('#profile_photo').attr( 'src',userdata.pictureUrl );
+    logout();
     $.ajax({
      url: "users/create",
      type: "get",
      data: {"social_type": "linkedin","firstName": userdata.firstName,"lastName": userdata.lastName,"email": userdata.emailAddress, "pictureUrl": userdata.pictureUrl },
      success: function(response){
-
-      $('#tableUser').css('display','block');
-      $('#fullname').text( userdata.firstName + " " + userdata.lastName);
-      // $('#email').text( userdata.emailAddress );
-      $('#profile_photo').attr( 'src',userdata.pictureUrl );
-      logout();
      }
    });
 
