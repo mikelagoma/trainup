@@ -19,11 +19,34 @@
 <body>
     <h1>Skills</h1>
     <select id="skillWrapper"  multiple="multiple">
-        <option class="skill">Skill 1</option>
-        <option class="skill">Skill 2</option>
-        <option class="skill active">CSS</option>
-        <option class="skill">Skill 4</option>
-        <option class="skill">Skill 5</option>
+    'P&L Analysis</option>
+        <option class="skill">Margin Optimization</option>
+        <option class="skill">Data Analysis'</option>
+        <option class="skill">Financial Modeling</option>
+        <option class="skill">Presentation</option>
+        <option class="skill">Project Management'</option>
+        <option class="skill">Talent Management</option>
+        <option class="skill">Team Development</option>
+        <option class="skill">Risk Management'</option>
+        <option class="skill">CapEx Strategy</option>
+        <option class="skill">*Data Extraction</option>
+        <option class="skill">*SQL</option>
+        <option class="skill">*Python</option>
+        <option class="skill">*HTML'</option>
+        <option class="skill">Javascript</option>
+        <option class="skill">Design Thinking</option>
+        <option class="skill">*UX Design'</option>
+        <option class="skill">*App Store Optimization</option>
+        <option class="skill">*Product Marketing'</option>
+        <option class="skill">Story / Issue Ticketing</option>
+        <option class="skill">Analytics Software</option>
+        <option class="skill">A/B Testing'</option>
+        <option class="skill">Prototype Design</option>
+        <option class="skill">Experiment Design</option>
+        <option class="skill">Roadmapping'</option>
+        <option class="skill">API Integration</option>
+        <option class="skill">Team Management</option>
+        <option class="skill">Strategy</option>
     </select>
     <h1>Courses</h1>
     <div class="courseWrapper">
@@ -45,4 +68,53 @@
     //     $('#skillWrapper').multiselect();
     // });
     $("#skillWrapper").chosen()
+
+var skill_resources = {
+  "skills" : [
+    {
+      "name" : "P&L Analysis",
+      "resources" : [
+        {
+          "name" : "Understanding Financial Statements",
+          "link" : "https://www.coursera.org/learn/income-statement"
+        },
+        {
+          "name" : "The Complete Financial Statement Analysis Course",
+          "link" : "https://www.udemy.com/the-complete-financial-statement-analysis-course/"
+        },
+        {
+          "name" : "Understanding Financial Statements",
+          "link" : "https://www.ecornell.com/courses/financial-management/understanding-financial-statements/"
+        },
+      ]
+    },
+    {
+      "name" : "Margin Optimization",
+      "resources" : [
+        {
+          "name" : "Financial Management Specialization",
+          "link" : "https://www.coursera.org/specializations/financial-management"
+        },
+        {
+          "name" : "Business Analytics Specialization",
+          "link" : "https://www.coursera.org/specializations/business-analytics"
+        },
+        {
+          "name" : "Business Statistics & Analysis Specialization",
+          "link" : "https://www.coursera.org/specializations/business-statistics-analysis"
+        },
+      ]
+    },
+    {
+      "name" : "Financial Modeling",
+      "resources" : [
+        {
+          "name" : "Business & Financial Modeling Specialization",
+          "link" : "https://www.coursera.org/specializations/wharton-business-financial-modeling"
+        },
+      ]
+    },
+  ]
+}
+alert(skill_resources.skills[0].resources[0].name)
 </script>

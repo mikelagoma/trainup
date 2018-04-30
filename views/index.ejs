@@ -60,6 +60,7 @@
     // $('#email').text( userdata.emailAddress );
     $('#profile_photo').attr( 'src',userdata.pictureUrl );
     logout();
+
     $.ajax({
      url: "users/create",
      type: "get",
