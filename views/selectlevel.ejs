@@ -6,8 +6,7 @@
 
 <body>
 <h1>What title do you seek?</h1>
-<form id="levels-form" action="/level" method="post">
-  <select id="levels-select">
+  <select>
     <option>Entry level</option>
     <option>Mid level</option>
     <option>Senior level</option>
@@ -16,15 +15,6 @@
     <option>Senior Director</option>
     <option>VP</option>
   </select>
-  <button id="select" type="submit">Select</button>
-  </form>
+  <button class="select">Select</button>
 </body>
 </html>
-<script>
-// onclick event is assigned to the #button element.
-// just using form post
-document.getElementByIdName("select").onclick = function() {
-  window.location.href = "/skills";
-};
-
-</script>

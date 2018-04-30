@@ -16,12 +16,16 @@ router.get('/level', function(req, res, next) {
   res.render('selectlevel.html')
 });
 
+router.post('/level', function(req, res, next) {
+  res.render('skills.html')
+});
+
 router.get('/skills', function(req, res, next) {
   res.render('skills.html')
 });
 
-router.post('/level', function(req, res, next) {
-  res.render('skills.html')
+router.post('/skills', function(req, res, next) {
+  res.render('resources.html')
 });
 
 function callbackFunction(){

@@ -12,14 +12,17 @@
     <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/> -->
     <script src="js/chosen.jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="css/chosen.min.css">
-    <link rel="stylesheet" type="text/css" href="trainup.css">
-    <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/trainup.css">
+
+    <!--Temporary comment for slow internet-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet"> -->
 </head>
 
 <body>
+<!-- <form id="skills-form" action="/skills" method="post"> -->
     <h1>Skills</h1>
     <select id="skillWrapper"  multiple="multiple">
-    'P&L Analysis</option>
+        <option class="skill">P&L Analysis</option>
         <option class="skill">Margin Optimization</option>
         <option class="skill">Data Analysis'</option>
         <option class="skill">Financial Modeling</option>
@@ -48,8 +51,13 @@
         <option class="skill">Team Management</option>
         <option class="skill">Strategy</option>
     </select>
+    <div class="buttonWrapper" id="buttonWrapper">
+      <button id="select" type="submit">Show Resources</button>
+    </div>
+  <!-- </form> -->
     <h1>Courses</h1>
-    <div class="courseWrapper">
+    <ul 
+    <!-- <div class="courseWrapper">
     <div class="course">
         <div class="title">Build Responsive Real World Websites with HTML5 and CSS3</div>
         <div class="rating twostar"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 566.29 101.09"><defs><style>.cls-1{fill:#fff;}</style></defs><title>Artboard 1</title><g id="Star1"><polygon class="cls-1" points="513.14 0 529.57 33.28 566.29 38.61 539.72 64.51 545.99 101.09 513.14 83.82 480.3 101.09 486.57 64.51 460 38.61 496.72 33.28 513.14 0"/></g><g id="Star2"><polygon class="cls-1" points="398.14 0 414.57 33.28 451.29 38.61 424.72 64.51 430.99 101.09 398.14 83.82 365.3 101.09 371.57 64.51 345 38.61 381.72 33.28 398.14 0"/></g><g id="Star3"><polygon class="cls-1" points="283.14 0 299.57 33.28 336.29 38.61 309.72 64.51 315.99 101.09 283.14 83.82 250.3 101.09 256.57 64.51 230 38.61 266.72 33.28 283.14 0"/></g><g id="Star4"><polygon class="cls-1" points="168.15 0 184.57 33.28 221.29 38.61 194.72 64.51 200.99 101.09 168.15 83.82 135.3 101.09 141.57 64.51 115 38.61 151.72 33.28 168.15 0"/></g><g id="Star5"><polygon class="cls-1" points="53.15 0 69.57 33.28 106.29 38.61 79.72 64.51 85.99 101.09 53.15 83.82 20.3 101.09 26.57 64.51 0 38.61 36.72 33.28 53.15 0"/></g></svg></div>
@@ -58,7 +66,7 @@
         <div class="title">Build Responsive Real World Websites with HTML5 and CSS3</div>
         <div class="rating threestar"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 566.29 101.09"><defs><style>.cls-1{fill:#fff;}</style></defs><title>Artboard 1</title><g id="Star1"><polygon class="cls-1" points="513.14 0 529.57 33.28 566.29 38.61 539.72 64.51 545.99 101.09 513.14 83.82 480.3 101.09 486.57 64.51 460 38.61 496.72 33.28 513.14 0"/></g><g id="Star2"><polygon class="cls-1" points="398.14 0 414.57 33.28 451.29 38.61 424.72 64.51 430.99 101.09 398.14 83.82 365.3 101.09 371.57 64.51 345 38.61 381.72 33.28 398.14 0"/></g><g id="Star3"><polygon class="cls-1" points="283.14 0 299.57 33.28 336.29 38.61 309.72 64.51 315.99 101.09 283.14 83.82 250.3 101.09 256.57 64.51 230 38.61 266.72 33.28 283.14 0"/></g><g id="Star4"><polygon class="cls-1" points="168.15 0 184.57 33.28 221.29 38.61 194.72 64.51 200.99 101.09 168.15 83.82 135.3 101.09 141.57 64.51 115 38.61 151.72 33.28 168.15 0"/></g><g id="Star5"><polygon class="cls-1" points="53.15 0 69.57 33.28 106.29 38.61 79.72 64.51 85.99 101.09 53.15 83.82 20.3 101.09 26.57 64.51 0 38.61 36.72 33.28 53.15 0"/></g></svg></div>
     </div>
-    </div>
+    </div> -->
 </body>
 
 </html>
@@ -69,7 +77,7 @@
     // });
     $("#skillWrapper").chosen()
 
-var skill_resources = {
+var skillToResources = {
   "skills" : [
     {
       "name" : "P&L Analysis",
@@ -116,5 +124,40 @@ var skill_resources = {
     },
   ]
 }
-alert(skill_resources.skills[0].resources[0].name)
+// alert(skill_resources.skills[0].resources[0].name)
+document.getElementById("buttonWrapper").onclick = function() {//skillToResources) {
+  // window.location.href = "/level";
+  // var selectedSkills = document.getElementById("skillWrapper");
+
+  // // Random crap
+  // console.log(skills.options);
+  // console.log(skills.selectedIndex);
+  // var str_array = selectedUserRole.split(',');
+  // console.log(str_array)
+  // for (var i = 0; i < str_array.length; i++) {
+  //     str_array[i] = str_array[i].replace(/^\s*/, "").replace(/\s*$/, "");
+  // }
+  // $("UserRole").val(str_array).trigger("chosen:updated");
+
+  // 
+  selectedSkills = $('#skillWrapper').chosen().val()
+  // Get resources from selected skills
+  for (var i = 0; i < skillToResources.skills.length; i++) {
+    for (var si = 0; si < selectedSkills.length; si++){
+      if (selectedSkills[si] === skillToResources.skills[i]) {
+        console.log('found at ' + si)
+        continue
+      }
+    }
+    for (var j = 0; j < skillToResources.skills[i].resources.length; j++) {
+      console.log(skillToResources.skills[i].resources[j].name + ' found at skill index ' + si)
+    }
+  }
+  function function1() {
+    var ul = document.getElementById("list");
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode("Four"));
+    ul.appendChild(li);
+}
+};
 </script>
