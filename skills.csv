@@ -1,0 +1,123 @@
+﻿Skill,Position,Field
+P&L Analysis,Analyst,Finance
+P&L Analysis,Sr. Analyst,Finance
+P&L Analysis,Manager,Finance
+P&L Analysis,Director,Finance
+P&L Analysis,VP,Finance
+Margin Optimization,Analyst,Finance
+Margin Optimization,Sr. Analyst,Finance
+Margin Optimization,Manager,Finance
+Margin Optimization,Director,Finance
+Margin Optimization,VP,Finance
+Data Analysis,Analyst,Finance
+Data Analysis,Sr. Analyst,Finance
+Data Analysis,Manager,Finance
+Data Analysis,Director,Finance
+Data Analysis,VP,Finance
+Financial Modeling,Analyst,Finance
+Financial Modeling,Sr. Analyst,Finance
+Financial Modeling,Manager,Finance
+Financial Modeling,Director,Finance
+Financial Modeling,VP,Finance
+Presentation,Manager,Finance
+Presentation,Director,Finance
+Presentation,VP,Finance
+Project Management,Manager,Finance
+Project Management,Director,Finance
+Project Management,VP,Finance
+Talent Management,Manager,Finance
+Talent Management,Director,Finance
+Talent Management,VP,Finance
+Team Development,Manager,Finance
+Team Development,Director,Finance
+Team Development,VP,Finance
+Risk Management,Director,Finance
+Risk Management,VP,Finance
+CapEx Strategy,Analyst,Finance
+CapEx Strategy,Director,Finance
+CapEx Strategy,VP,Finance
+*Data Extraction,Associate PM,Product Management
+*Data Extraction,PM,Product Management
+*Data Extraction,Sr. PM,Product Management
+*Data Extraction,Lead PM,Product Management
+*Data Extraction,"Director, PM",Product Management
+*SQL,Associate PM,Product Management
+*SQL,PM,Product Management
+*SQL,Sr. PM,Product Management
+*SQL,Lead PM,Product Management
+*SQL,"Director, PM",Product Management
+*Python,Associate PM,Product Management
+*Python,PM,Product Management
+*Python,Sr. PM,Product Management
+*Python,Lead PM,Product Management
+*Python,"Director, PM",Product Management
+*HTML,Associate PM,Product Management
+*HTML,PM,Product Management
+*HTML,Sr. PM,Product Management
+*HTML,Lead PM,Product Management
+*HTML,"Director, PM",Product Management
+*Javascript,Associate PM,Product Management
+*Javascript,PM,Product Management
+*Javascript,Sr. PM,Product Management
+*Javascript,Lead PM,Product Management
+*Javascript,"Director, PM",Product Management
+Design Thinking,Associate PM,Product Management
+Design Thinking,PM,Product Management
+Design Thinking,Sr. PM,Product Management
+Design Thinking,Lead PM,Product Management
+Design Thinking,"Director, PM",Product Management
+*UX Design,Associate PM,Product Management
+*UX Design,PM,Product Management
+*UX Design,Sr. PM,Product Management
+*UX Design,Lead PM,Product Management
+*UX Design,"Director, PM",Product Management
+*App Store Optimization,Associate PM,Product Management
+*App Store Optimization,PM,Product Management
+*App Store Optimization,Sr. PM,Product Management
+*App Store Optimization,Lead PM,Product Management
+*App Store Optimization,"Director, PM",Product Management
+*Product Marketing,Associate PM,Product Management
+*Product Marketing,PM,Product Management
+*Product Marketing,Sr. PM,Product Management
+*Product Marketing,Lead PM,Product Management
+*Product Marketing,"Director, PM",Product Management
+Data Analysis,PM,Product Management
+Data Analysis,Sr. PM,Product Management
+Data Analysis,Lead PM,Product Management
+Data Analysis,"Director, PM",Product Management
+Story / Issue Ticketing,PM,Product Management
+Story / Issue Ticketing,Sr. PM,Product Management
+Story / Issue Ticketing,Lead PM,Product Management
+Story / Issue Ticketing,"Director, PM",Product Management
+Analytics Software,PM,Product Management
+Analytics Software,Sr. PM,Product Management
+Analytics Software,Lead PM,Product Management
+Analytics Software,"Director, PM",Product Management
+A/B Testing,PM,Product Management
+A/B Testing,Sr. PM,Product Management
+A/B Testing,Lead PM,Product Management
+A/B Testing,"Director, PM",Product Management
+Prototype Design,PM,Product Management
+Prototype Design,Sr. PM,Product Management
+Prototype Design,Lead PM,Product Management
+Prototype Design,"Director, PM",Product Management
+Experiment Design,PM,Product Management
+Experiment Design,Sr. PM,Product Management
+Experiment Design,Lead PM,Product Management
+Experiment Design,"Director, PM",Product Management
+Roadmapping,PM,Product Management
+Roadmapping,Sr. PM,Product Management
+Roadmapping,Lead PM,Product Management
+Roadmapping,"Director, PM",Product Management
+API Integration,PM,Product Management
+API Integration,Sr. PM,Product Management
+API Integration,Lead PM,Product Management
+API Integration,"Director, PM",Product Management
+Team Management,PM,Product Management
+Team Management,Sr. PM,Product Management
+Team Management,Lead PM,Product Management
+Team Management,"Director, PM",Product Management
+Strategy,PM,Product Management
+Strategy,Sr. PM,Product Management
+Strategy,Lead PM,Product Management
+Strategy,"Director, PM",Product Management
