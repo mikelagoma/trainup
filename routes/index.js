@@ -8,6 +8,22 @@ router.get('/', function(req, res, next) {
   res.render('login', { title: 'Express test', IN_KEY: IN_KEY });
 });
 
+router.get('/role', function(req, res, next) {
+  res.render('whatjob.html')
+});
+
+router.get('/level', function(req, res, next) {
+  res.render('selectlevel.html')
+});
+
+router.get('/skills', function(req, res, next) {
+  res.render('skills.html')
+});
+
+router.post('/level', function(req, res, next) {
+  res.render('skills.html')
+});
+
 function callbackFunction(){
   console.log('callback')
 };

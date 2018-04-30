@@ -1,12 +1,13 @@
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="trainup.css">
+  <!-- <link rel="stylesheet" type="text/css" href="trainup.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
 </head>
 
 <body>
 <h1>What title do you seek?</h1>
-  <select>
+<form id="levels-form" action="/level" method="post">
+  <select id="levels-select">
     <option>Entry level</option>
     <option>Mid level</option>
     <option>Senior level</option>
@@ -15,6 +16,15 @@
     <option>Senior Director</option>
     <option>VP</option>
   </select>
-  <button class="select">Select</button>
+  <button id="select" type="submit">Select</button>
+  </form>
 </body>
 </html>
+<script>
+// onclick event is assigned to the #button element.
+document.getElementByIdName("select").onclick = function() {
+  alert('hi')
+  window.location.href = "/skills";
+};
+
+</script>

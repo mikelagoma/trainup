@@ -8,12 +8,24 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="/javascripts/jquery.min.js"/>
+    <!-- <script type="text/javascript" src="//platform.linkedin.com/in.js">
       api_key:    <%= IN_KEY %>
       onLoad:     onLinkedInLoad
-  </script>
-
+    </script> -->
+    <script type="text/javascript">
+      // Add selectlevel html to view
+      // $(function () {
+      //   $.get("/html/selectlevel.html", function(data){
+      //     $("#selectlevel-div").html(data);
+      //     alert("Should be appending html");
+      //   });
+      // });
+      function load_home() {
+        document.getElementById("content").innerHTML='<object type="text/html" data="/html/selectlevel.html" ></object>';
+      }
+    </script>
 <script type="text/javascript">
   // Setup an event listener to make an API call once auth is complete
   function onLinkedInLoad() {
@@ -99,7 +111,7 @@
       <div class="form-group">
         <label for="name">What do you want to be</label>
         <input type="text" class="form-control" id="name" required>
-        <select name="roles">
+        <select name="roles" id="roles">
           <option value="frontend">Front-End Developer</option>
           <option value="designer">UI/UX Design</option>
           <option value="pm">Project Management</option>
@@ -137,6 +149,7 @@
       <li class="flex-item">AR/VR Developer</li>
       <li class="flex-item">Mobile Developer</li>
     </ul>
+    <div id="selectlevel-div"></div>
 
   <footer class="site-footer bg-universe" data-detect-viewport="">
 
@@ -178,7 +191,7 @@
                     <!-- Begin MailChimp Signup Form -->
                     <h4 class="h4">sign up for updates</h4>
                     <div id="mc_embed_signup">
-                        <form action="//github.us11.list-manage.com/subscribe/post?u=9d7ced8c4bbd6c2f238673f0f&amp;id=2c583a58c9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe-form" target="_blank" novalidate>
+                        <form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe-form" target="_blank" novalidate>
                             <div id="mc_embed_signup_scroll">
                                 <div class="mc-field-group">
                                     <label for="mce-EMAIL" class="d-none sr-only">Email Address</label>
@@ -198,7 +211,7 @@
                             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9d7ced8c4bbd6c2f238673f0f_2c583a58c9" tabindex="-1" value=""></div>
                         </form>
                     </div>
-                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                    <!-- <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script> -->
                     <!--End mc_embed_signup-->
                 </div>
             </div>
@@ -224,6 +237,21 @@
         <img data-detect-viewport="" class="site-footer-planet" src="/images/planet-gradient.svg" alt="Saturn icon" />
     </footer>
 
+
  </body>
 </html>
 
+<script>
+  alert('test');
+  //role selected
+  $('#roles').change(function(){ 
+    var value = $(this).val();
+    alert('"' + value + '" selected');
+    addSelectlevel();
+  });
+
+  function addSelectlevel() {
+    alert('jquery to add div');
+    
+  }
+</script>

@@ -1,0 +1,46 @@
+<html>
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="trainup.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
+</head>
+
+<body>
+harvey
+<h1>What title do you seek?</h1>
+<form id="levels-form">
+  <select id="levels-select">
+    <option>Entry level</option>
+    <option>Mid level</option>
+    <option>Senior level</option>
+    <option>Senior manager</option>
+    <option>Director</option>
+    <option>Senior Director</option>
+    <option>VP</option>
+  </select>
+  <button type="submit">Select</button>
+  </form>
+</body>
+</html>
+<script>
+// onclick event is assigned to the #button element.
+// document.getElementByIdName("select").onclick = function() {
+//   window.location.href = "/skills";
+// };
+
+function processForm(e) {
+    if (e.preventDefault) e.preventDefault();
+    console.log('processing form')
+    /* do what you want with the form */
+    window.location.href = "/skills";
+
+    // You must return false to prevent the default form behavior
+    return false;
+}
+alert('test')
+var form = document.getElementById('levels-form');
+// if (form.attachEvent) {
+    form.attachEvent("submit", processForm);
+// } else {
+    form.addEventListener("submit", processForm);
+// }
+</script>
