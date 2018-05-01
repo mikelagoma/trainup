@@ -28,6 +28,10 @@ router.post('/skills', function(req, res, next) {
   res.render('resources.html')
 });
 
+router.get('/mvp', function(req, res, next) {
+  res.render('mvp.html')
+});
+
 function callbackFunction(){
   console.log('callback')
 };
