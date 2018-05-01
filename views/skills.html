@@ -257,12 +257,17 @@ document.getElementById("buttonWrapper").onclick = function() {//skillToResource
   selectedSkills = $('#skillWrapper').chosen().val()
   // Get resources from selected skills
   for (var i = 0; i < skillToResources.skills.length; i++) {
+    var bool = false;
     for (var si = 0; si < selectedSkills.length; si++){
+      console.log()
       if (selectedSkills[si] == skillToResources.skills[i]) {
         console.log('found at ' + si)
-        alert('skip')
-        continue;
+        var bool = true;
+        break;
       }
+    }
+    if (bool === true) {
+      continue;
     }
     for (var j = 0; j < skillToResources.skills[i].resources.length; j++) {
       resource_name = skillToResources.skills[i].resources[j].name
