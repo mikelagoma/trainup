@@ -160,14 +160,13 @@ document.getElementById("buttonWrapper").onclick = function() {//skillToResource
   }
 };
 function createResource(resourceName, resourceNode, resourceLink) {
-  alert('appending')
   var ul = document.getElementById("list");
   var li = document.createElement("li");
   var a = document.createElement("a");
 
   a.appendChild(document.createTextNode(resource_name));
   a.href = resourceLink;
-  li.appendChild(a)
+  li.appendChild(a);
   li.setAttribute("id", resource_node);
   ul.appendChild(li);
 }
