@@ -76,168 +76,14 @@
 document.getElementById("next").onclick = function() {
   window.location.href = "/mvp";
 };
-    // $(document).ready(function() {
-    //     $('#skillWrapper').multiselect();
-    // });
-    $("#skillWrapper").chosen()
+// $(document).ready(function() {
+//     $('#skillWrapper').multiselect();
+// });
+$("#skillWrapper").chosen();
 
-var skillToResources = {
-  "skills" : [
-    {
-      "name" : "P&L Analysis",
-      "resources" : [
-        {
-          "name" : "Understanding Financial Statements",
-          "link" : "https://www.coursera.org/learn/income-statement"
-        },
-        {
-          "name" : "The Complete Financial Statement Analysis Course",
-          "link" : "https://www.udemy.com/the-complete-financial-statement-analysis-course/"
-        },
-        {
-          "name" : "Understanding Financial Statements",
-          "link" : "https://www.ecornell.com/courses/financial-management/understanding-financial-statements/"
-        },
-      ]
-    },
-    {
-      "name" : "Margin Optimization",
-      "resources" : [
-        {
-          "name" : "Financial Management Specialization",
-          "link" : "https://www.coursera.org/specializations/financial-management"
-        },
-        {
-          "name" : "Business Analytics Specialization",
-          "link" : "https://www.coursera.org/specializations/business-analytics"
-        },
-        {
-          "name" : "Business Statistics & Analysis Specialization",
-          "link" : "https://www.coursera.org/specializations/business-statistics-analysis"
-        },
-      ]
-    },
-    {
-      "name" : "Data Analysis",
-      "resources" : [
-        {
-          "name" : "Intro to Data Analysis",
-          "link" : "https://www.edx.org/course/introduction-to-data-analysis-using-excel"
-        },
-        {
-          "name" : "Regression Modeling in Practice",
-          "link" : "https://www.coursera.org/learn/regression-modeling-practice"
-        },
-        {
-          "name" : "Statistics with R",
-          "link" : "https://www.coursera.org/specializations/statistics"
-        },
-      ]
-    },
-    {
-      "name" : "Financial Modeling",
-      "resources" : [
-        {
-          "name" : "Business & Financial Modeling Specialization",
-          "link" : "https://www.coursera.org/specializations/wharton-business-financial-modeling"
-        },
-        {
-          "name" : "CFI Financial Analyst Certificate",
-          "link" : "https://corporatefinanceinstitute.com/certifications/financial-modeling-valuation-analyst-fmva-program/"
-        },
-        {
-          "name" : "Budgeting & Forecasting",
-          "link" : "https://courses.corporatefinanceinstitute.com/courses/budgeting-and-forecasting-fpa"
-        },
-      ]
-    },
-    {
-      "name" : "Presentation",
-      "resources" : [
-        {
-          "name" : "Toastmasters",
-          "link" : "https://www.toastmasters.org/"
-        },
-        {
-          "name" : "Dynamic Public Speaking ",
-          "link" : "https://www.coursera.org/specializations/public-speaking"
-        },
-        {
-          "name" : "Presentation Skills",
-          "link" : "https://www.coursera.org/specializations/presentation-skills"
-        },
-      ]
-    },
-    {
-      "name" : "Project Management",
-      "resources" : [
-        {
-          "name" : "PMP Certification",
-          "link" : "https://www.pmi.org/certifications/types/project-management-pmp"
-        },
-        {
-          "name" : "The Science of Lean Operations",
-          "link" : "https://www.kellogg.northwestern.edu/executive-education/take-action/ps/lean-supply/2016-10-lean-supply-01/?utm_source=google&utm_medium=cpc&utm_term=lean%20six%20sigma&utm_campaign=Exec_Ed_-_Non_Brand_-_Exact&utm_device=c&gclid=Cj0KCQjw_ZrXBRDXARIsAA8KauRs-LKtGtkEmVbDmLGmMkm_sA8MHnC4riq4vi6mLq3RA4BS9PiEpXEaAqXVEALw_wcB"
-        },
-        {
-          "name" : "Business Process Design",
-          "link" : "https://getsmarter.mit.edu/mit-sloan-business-process-design-for-strategic-management-online-short-course-hm/?gclid=Cj0KCQjw_ZrXBRDXARIsAA8KauQRi2XQ9PAm9qjr31kuG-Wu33D8Jg3bDj6n7QXW3i7-DLAMNyZypVUaAtWwEALw_wcB"
-        },
-      ]
-    },
-    {
-      "name" : "Talent Management",
-      "resources" : [
-        {
-          "name" : "Leadership Coaching Strategies",
-          "link" : "https://www.extension.harvard.edu/professional-development/programs/leadership-coaching-strategies"
-        },
-        {
-          "name" : "Managing Yourself & Leading Others",
-          "link" : "https://www.extension.harvard.edu/professional-development/programs/managing-yourself-and-leading-others"
-        },
-        {
-          "name" : "Strategic Leadership",
-          "link" : "https://www.extension.harvard.edu/professional-development/programs/strategic-leadership"
-        },
-      ]
-    },
-    {
-      "name" : "Risk Management",
-      "resources" : [
-        {
-          "name" : "Risk Management & Derivatives",
-          "link" : "https://www.coursera.org/learn/financial-engineering-2/lecture/3e7Gf/risk-management-of-derivatives-portfolios"
-        },
-        {
-          "name" : "Identifying, Monitoring & Analyzing Risk",
-          "link" : "https://www.coursera.org/learn/incident-response-recovery-risks-sscp"
-        },
-        {
-          "name" : "Managing Risk & Changes ",
-          "link" : "https://www.coursera.org/learn/project-risk-management"
-        },
-      ]
-    },
-    {
-      "name" : "CapEx Strategy",
-      "resources" : [
-        {
-          "name" : "Capital Budgeting",
-          "link" : "https://ocw.mit.edu/courses/sloan-school-of-management/15-401-finance-theory-i-fall-2008/video-lectures-and-slides/capital-budgeting/"
-        },
-        {
-          "name" : "Intro to Capital Budgeting ",
-          "link" : "https://www.coursera.org/learn/capital-budgeting/lecture/uP9l1/1-1-introduction-to-capital-budgeting"
-        },
-        {
-          "name" : "Capital Budgeting & Investments",
-          "link" : "https://msu.edu/course/prr/371/BUDGET%20READINGS/Capital%20Budgeting%20%26%20Investment%20Analysis.htm"
-        },
-      ]
-    },
-  ]
-}
+var roleToSkills = <%-JSON.stringify(roleToSkills) %>
+var skillToResources = <%-JSON.stringify(skillToResources) %>
+
 // alert(skill_resources.skills[0].resources[0].name)
 document.getElementById("buttonWrapper").onclick = function() {//skillToResources) {
   // window.location.href = "/level";
@@ -256,17 +102,39 @@ document.getElementById("buttonWrapper").onclick = function() {//skillToResource
   // 
   selectedSkills = $('#skillWrapper').chosen().val()
   // Get resources from selected skills
-  for (var i = 0; i < skillToResources.skills.length; i++) {
+  // Hardcode to select Finance Director for now, need to GET/POST selection from previous screens
+  var roleSkills = Array();
+  for (var i = 0; i < roleToSkills.fields.length; i++) {
+    var field = roleToSkills.fields[i].name
+    console.log(field)
+    if (field == 'Finance') {
+      console.log('found finance')
+      for (var j = 0; j < roleToSkills.fields[i].positions.length; j++) {
+        var position = roleToSkills.fields[i].positions[j].name
+        if (position == 'Director') {
+          roleSkills = roleToSkills.fields[i].positions[j].skills;
+          break;
+        }
+      }
+      break;
+    }
+  }
+  console.log(roleSkills);
+  for (var i = 0; i < roleSkills.length; i++) {
     var bool = false;
     for (var si = 0; si < selectedSkills.length; si++){
-      console.log()
-      if (selectedSkills[si] == skillToResources.skills[i]) {
-        console.log('found at ' + si)
-        var bool = true;
+      var resourceSkill = skillToResources.skills[i].name.replace( /[^a-zA-Z]/g, '' ).toLowerCase();
+      var selectedSkill = selectedSkills[si].replace( /[^a-zA-Z]/g, '' ).toLowerCase();
+      console.log(selectedSkill + ' = ' + resourceSkill + '?');
+      if (selectedSkill == resourceSkill) {
+        console.log('yes, found at ' + si);
+        bool = true;
         break;
       }
     }
-    if (bool === true) {
+    console.log('bool: ' + bool)
+    if (bool == true) {
+      console.log('skipping skill: ' + skillToResources.skills[i])
       continue;
     }
     for (var j = 0; j < skillToResources.skills[i].resources.length; j++) {

@@ -1,0 +1,421 @@
+{
+  "fields" : [
+    {
+      "name" : "Finance",
+      "positions" : [
+        {
+          "name" : "Analyst",
+          "skills" : [
+            {
+              "name" : "P&L Analysis"
+            },
+            {
+              "name" : "Margin Optimization"
+            },
+            {
+              "name" : "Data Analysis"
+            },
+            {
+              "name" : "Financial Modeling"
+            },
+            {
+              "name" : "CapEx Strategy"
+            }
+          ]
+        },
+        {
+          "name" : "Sr. Analyst",
+          "skills" : [
+            {
+              "name" : "P&L Analysis"
+            },
+            {
+              "name" : "Margin Optimization"
+            },
+            {
+              "name" : "Data Analysis"
+            },
+            {
+              "name" : "Financial Modeling"
+            }
+          ]
+        },
+        {
+          "name" : "Manager",
+          "skills" : [
+            {
+              "name" : "P&L Analysis"
+            },
+            {
+              "name" : "Margin Optimization"
+            },
+            {
+              "name" : "Data Analysis"
+            },
+            {
+              "name" : "Financial Modeling"
+            },
+            {
+              "name" : "Presentation"
+            },
+            {
+              "name" : "Project Management"
+            },
+            {
+              "name" : "Talent Management"
+            }
+          ]
+        },
+        {
+          "name" : "Director",
+          "skills" : [
+            {
+              "name" : "P&L Analysis"
+            },
+            {
+              "name" : "Margin Optimization"
+            },
+            {
+              "name" : "Data Analysis"
+            },
+            {
+              "name" : "Financial Modeling"
+            },
+            {
+              "name" : "Presentation"
+            },
+            {
+              "name" : "Project Management"
+            },
+            {
+              "name" : "Talent Management"
+            },
+            {
+              "name" : "Risk Management"
+            },
+            {
+              "name" : "CapEx Strategy"
+            }
+          ]
+        },
+        {
+          "name" : "VP",
+          "skills" : [
+            {
+              "name" : "P&L Analysis"
+            },
+            {
+              "name" : "Margin Optimization"
+            },
+            {
+              "name" : "Data Analysis"
+            },
+            {
+              "name" : "Financial Modeling"
+            },
+            {
+              "name" : "Presentation"
+            },
+            {
+              "name" : "Project Management"
+            },
+            {
+              "name" : "Talent Management"
+            },
+            {
+              "name" : "Risk Management"
+            },
+            {
+              "name" : "CapEx Strategy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name" : "Product Management",
+      "positions" : [
+        {
+          "name" : "Associate PM",
+          "skills" : [
+            {
+              "name" : "*Data Extraction"
+            },
+            {
+              "name" : "*SQL"
+            },
+            {
+              "name" : "*Python"
+            },
+            {
+              "name" : "*HTML"
+            },
+            {
+              "name" : "*Javascript"
+            },
+            {
+              "name" : "Design Thinking"
+            },
+            {
+              "name" : "*UX Design"
+            },
+            {
+              "name" : "*App Store Optimization"
+            },
+            {
+              "name" : "*Product Marketing"
+            }
+          ]
+        },
+        {
+          "name" : "PM",
+          "skills" : [
+            {
+              "name" : "*Data Extraction"
+            },
+            {
+              "name" : "*SQL"
+            },
+            {
+              "name" : "*Python"
+            },
+            {
+              "name" : "*HTML"
+            },
+            {
+              "name" : "*Javascript"
+            },
+            {
+              "name" : "Design Thinking"
+            },
+            {
+              "name" : "*UX Design"
+            },
+            {
+              "name" : "*App Store Optimization"
+            },
+            {
+              "name" : "*Product Marketing"
+            },
+            {
+              "name" : "Data Analysis"
+            },
+            {
+              "name" : "Story / Issue Ticketing"
+            },
+            {
+              "name" : "Analytics Software"
+            },
+            {
+              "name" : "A/B Testing"
+            },
+            {
+              "name" : "Prototype Design"
+            },
+            {
+              "name" : "Experiment Design"
+            },
+            {
+              "name" : "Roadmapping"
+            },
+            {
+              "name" : "API Integration"
+            },
+            {
+              "name" : "Team Management"
+            },
+            {
+              "name" : "Strategy"
+            }
+          ]
+        },
+        {
+          "name" : "Sr. PM",
+          "skills" : [
+            {
+              "name" : "*Data Extraction"
+            },
+            {
+              "name" : "*SQL"
+            },
+            {
+              "name" : "*Python"
+            },
+            {
+              "name" : "*HTML"
+            },
+            {
+              "name" : "*Javascript"
+            },
+            {
+              "name" : "Design Thinking"
+            },
+            {
+              "name" : "*UX Design"
+            },
+            {
+              "name" : "*App Store Optimization"
+            },
+            {
+              "name" : "*Product Marketing"
+            },
+            {
+              "name" : "Data Analysis"
+            },
+            {
+              "name" : "Story / Issue Ticketing"
+            },
+            {
+              "name" : "Analytics Software"
+            },
+            {
+              "name" : "A/B Testing"
+            },
+            {
+              "name" : "Prototype Design"
+            },
+            {
+              "name" : "Experiment Design"
+            },
+            {
+              "name" : "Roadmapping"
+            },
+            {
+              "name" : "API Integration"
+            },
+            {
+              "name" : "Team Management"
+            },
+            {
+              "name" : "Strategy"
+            }
+          ]
+        },
+        {
+          "name" : "Lead PM",
+          "skills" : [
+            {
+              "name" : "*Data Extraction"
+            },
+            {
+              "name" : "*SQL"
+            },
+            {
+              "name" : "*Python"
+            },
+            {
+              "name" : "*HTML"
+            },
+            {
+              "name" : "*Javascript"
+            },
+            {
+              "name" : "Design Thinking"
+            },
+            {
+              "name" : "*UX Design"
+            },
+            {
+              "name" : "*App Store Optimization"
+            },
+            {
+              "name" : "*Product Marketing"
+            },
+            {
+              "name" : "Data Analysis"
+            },
+            {
+              "name" : "Story / Issue Ticketing"
+            },
+            {
+              "name" : "Analytics Software"
+            },
+            {
+              "name" : "A/B Testing"
+            },
+            {
+              "name" : "Prototype Design"
+            },
+            {
+              "name" : "Experiment Design"
+            },
+            {
+              "name" : "Roadmapping"
+            },
+            {
+              "name" : "API Integration"
+            },
+            {
+              "name" : "Team Management"
+            },
+            {
+              "name" : "Strategy"
+            }
+          ]
+        },
+        {
+          "name" : "Director, PM",
+          "skills" : [
+            {
+              "name" : "*Data Extraction"
+            },
+            {
+              "name" : "*SQL"
+            },
+            {
+              "name" : "*Python"
+            },
+            {
+              "name" : "*HTML"
+            },
+            {
+              "name" : "*Javascript"
+            },
+            {
+              "name" : "Design Thinking"
+            },
+            {
+              "name" : "*UX Design"
+            },
+            {
+              "name" : "*App Store Optimization"
+            },
+            {
+              "name" : "*Product Marketing"
+            },
+            {
+              "name" : "Data Analysis"
+            },
+            {
+              "name" : "Story / Issue Ticketing"
+            },
+            {
+              "name" : "Analytics Software"
+            },
+            {
+              "name" : "A/B Testing"
+            },
+            {
+              "name" : "Prototype Design"
+            },
+            {
+              "name" : "Experiment Design"
+            },
+            {
+              "name" : "Roadmapping"
+            },
+            {
+              "name" : "API Integration"
+            },
+            {
+              "name" : "Team Management"
+            },
+            {
+              "name" : "Strategy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
